@@ -1,0 +1,19 @@
+{
+  "name": "desafios",
+  "version": "1.0.0",
+  "description": "30 Desafios Javascript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alanmrochadeveloper/desafios-js.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alanmrochadeveloper/desafios-js/issues"
+  },
+  "homepage": "https://github.com/alanmrochadeveloper/desafios-js#readme"
+}

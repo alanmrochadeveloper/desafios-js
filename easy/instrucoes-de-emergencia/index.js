@@ -25,6 +25,14 @@ function verifySameLetterFrequencyV2 (text) {
   return  counterSet.size === 1;
 }
 
+function authorSolution (str) {
+  const charCount = {}
+  for(let i = 0; i < str.length; i++) {
+    charCount[str[i]] = charCount[str[i]] ? charCount[str[i]] + 1: 1;
+  }
+  return  Object.values(charCount).every((count, index, array)=> index !== 0 ? count === array[index-1]:true)
+}
+
 test({
   'This is Thee': true,
   "ssd": false,
@@ -47,3 +55,15 @@ test({
   "asasdddas": true,
   "asadddas": false
 }, withPerfBenchMark(verifySameLetterFrequencyV2))
+
+
+test({
+  'This is Thee': true,
+  "ssd": false,
+  "Lorem ipsum": false,
+  "QQwweerrttyy": true,
+  "QQwweerrttyyy": false,
+  "asd": true,
+  "asasdddas": true,
+  "asadddas": false
+}, withPerfBenchMark(authorSolution))
